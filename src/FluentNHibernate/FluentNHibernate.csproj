@@ -1,23 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461;netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48;netcoreapp2.0</TargetFrameworks>
     <PlatformTarget>AnyCpu</PlatformTarget>
     <OutputType>Library</OutputType>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../FluentKey.snk</AssemblyOriginatorKeyFile>
+    <AssemblyVersion>3.3.4</AssemblyVersion>
+    <FileVersion>3.3.4</FileVersion>
+    <Version>3.3.4</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\</PackageOutputPath>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="NHibernate" Version="5.3.3" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\FluentKey.snk">
       <Link>FluentKey.snk</Link>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.5.5" />
+    <PackageReference Include="NHibernate.Driver.MySqlConnector" Version="2.0.4" />
   </ItemGroup>
 
 </Project>
